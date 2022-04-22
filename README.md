@@ -3,6 +3,19 @@ Jupyter workbook examples for raku [Dan](https://github.com/p6steve/raku-Dan)
 
 Top level raku Data ANalysis Module that provides a base set of raku-style datatype roles, accessors & methods
 
+
+
+
+TODOs
+- get working Dockerfile ... Jupyter scipy notebook + raku build
+
+
+
+
+
+
+vvvvvvvvvv FIXME
+
 # Instructions for Jupyter Notebook on Binder
 To launch with Binder:
 
