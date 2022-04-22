@@ -1,9 +1,22 @@
-FROM jupyter/scipy-notebook 
-#FROM --platform=linux/arm64 jupyter/scipy-notebook 
+#FROM jupyter/scipy-notebook 
+FROM --platform=linux/arm64 jupyter/scipy-notebook 
+
+USER root
+
+#Enabling Binder..................................
+
+#ENV NB_USER rakoon 
+#ENV NB_UID 1000
+#ENV HOME /home/${NB_USER}
+#RUN adduser --disabled-password \
+#    --gecos "Default user" \
+#    --uid ${NB_UID} \
+#    ${NB_USER}
+    
+#..............................................
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
-USER root
 RUN buildDeps="libc6-dev libencode-perl libzstd-dev libssl-dev \
                libbz2-dev libreadline-dev libsqlite3-dev llvm \
                libncurses5-dev tk-dev liblzma-dev \
@@ -32,11 +45,26 @@ RUN mkdir rakudo && git init \
     && zef install https://github.com/p6steve/raku-dan.git \
     && zef install https://github.com/p6steve/raku-dan-pandas.git \
     && git clone https://github.com/p6steve/raku-Dan-Jupyter.git \
-    && cp -R raku-Physics-Dan-Jupyter/eg ${HOME}
+    && cp -R raku-Dan-Jupyter/eg ${HOME}
     #&& apt-get purge -y --auto-remove $buildDeps
 
-
-#USER jovyan
-
+#ENV TINI_VERSION v0.18.0
+#ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+#RUN chmod +x /usr/bin/tini 
+#ENTRYPOINT ["/usr/bin/tini", "--"]
 ENTRYPOINT ["/bin/bash"]
+
+#For enabling binder..........................
+#COPY ./raku-notebooks/ ${HOME}
+
+#USER root
+#RUN chown -R ${NB_USER}:${NB_GID} ${HOME}
+#RUN chown -R ${NB_UID}:${NB_USER} ${HOME}
+#USER ${NB_USER}
+#WORKDIR ${HOME}
+#..............................................
+
+#EXPOSE 8888
+
+#CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
 
