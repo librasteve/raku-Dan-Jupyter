@@ -1,5 +1,10 @@
-#FROM jupyter/scipy-notebook #must have tag for Binder
+
+#must have tag for Binder (not 'latest')
 FROM jupyter/scipy-notebook:4b830d5897d8
+
+USER root
+
+USER ${NB_UID}
 
 #FROM --platform=linux/arm64 jupyter/scipy-notebook 
 
