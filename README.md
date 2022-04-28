@@ -1,5 +1,5 @@
 ## raku-Dan-Jupyter - WIP
-Jupyter workbook examples for raku [Dan](https://github.com/p6steve/raku-Dan)
+Jupyter workbook examples for raku [Dan](https://github.com/p6steve/raku-Dan) and [Dan::Pandas](https://github.com/p6steve/raku-Dan-Pandas)
 
 Top level raku Data ANalysis Module that provides a base set of raku-style datatype roles, accessors & methods
 
