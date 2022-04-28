@@ -1,5 +1,5 @@
-FROM jupyter/scipy-notebook 
-#FROM --platform=linux/arm64 jupyter/scipy-notebook 
+FROM jupyter/scipy-notebook:4b830d5897d8
+#must have tag for Binder (not 'latest')
 
 ENV PATH=$PATH:/usr/share/perl6/site/bin
 
@@ -30,14 +30,13 @@ RUN mkdir rakudo && git init \
     && zef install Linenoise App::Mi6 App::Prove6 \
     && zef install JSON::Tiny Digest::HMAC Digest::SHA256::Native \
     && zef install https://github.com/niner/Inline-Python.git --exclude="python3" \
-    #&& zef install https://github.com/niner/Inline-Python.git --exclude="python3" --force-test \
     && zef install https://github.com/p6steve/raku-dan.git \
     && zef install https://github.com/p6steve/raku-dan-pandas.git \
     && git clone https://github.com/p6steve/raku-Dan-Jupyter.git \
     && zef -v install git://github.com/bduggan/p6-jupyter-kernel.git \
     && jupyter-kernel.raku --generate-config \
-    && cp -R raku-Dan-Jupyter/eg ${HOME}
-    #&& apt-get purge -y --auto-remove $buildDeps
+    && cp -R raku-Dan-Jupyter/eg ${HOME} \
+    && apt-get purge -y --auto-remove $buildDeps
 
 #USER ${NB_UID}
 
