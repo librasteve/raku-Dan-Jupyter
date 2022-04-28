@@ -7,7 +7,9 @@ Top level raku Data ANalysis Module that provides a base set of raku-style datat
 
 
 TODOs
-- get working Dockerfile ... Jupyter scipy notebook + raku build
+- get working Dockerfile ... Jupyter scipy notebook + raku build - DONE
+- add synopsis as notebook - DONE
+- partition DFs - shorter cycle and better Binder chance
 
 
 
