@@ -30,6 +30,7 @@ RUN mkdir rakudo && git init \
     && zef install Linenoise App::Mi6 App::Prove6 \
     && zef install JSON::Tiny Digest::HMAC Digest::SHA256::Native \
     && zef install https://github.com/niner/Inline-Python.git --exclude="python3" \
+    && zef install Text::CSV \
     && zef install https://github.com/p6steve/raku-dan.git \
     && zef install https://github.com/p6steve/raku-dan-pandas.git \
     && git clone https://github.com/p6steve/raku-Dan-Jupyter.git \
