@@ -1,4 +1,4 @@
-FROM p6steve/raku-dan:pandas-2022.02-arm64
+FROM p6steve/raku-dan:pandas-2022.02-amd64
 
 EXPOSE 8888
 
