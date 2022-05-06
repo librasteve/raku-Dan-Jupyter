@@ -6,5 +6,4 @@ RUN echo 'jupyter notebook --port=8888 --no-browser --allow-root --ip=0.0.0.0' >
 #ENTRYPOINT ["/bin/bash"]
 
 #EXPOSE 8888
-
 #CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
