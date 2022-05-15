@@ -11,8 +11,12 @@ TODOs
 - add synopsis as notebook - DONE
 - partition DFs - shorter cycle and better Binder chance
 
-
-
+# Rebuild Docker Image
+```
+docker build -t p6steve/raku-dan:jupyter-2022.02-amd64 --platform=linux/amd64 .
+docker push p6steve/raku-dan:jupyter-2022.02-amd64
+```
+(you need to be p6steve to do this docker push ;-) )
 
 
 
