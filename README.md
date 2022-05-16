@@ -18,6 +18,10 @@ docker push p6steve/raku-dan:jupyter-2022.02-amd64
 ```
 (you need to be p6steve to do this docker push ;-) )
 
+# Instructions for Jupyter Lab on AWS LightSail
+- go to AWS LightSail 
+- launch a container from Docker hub
+- select ```p6steve/raku-dan:jupyter-2022.02-amd64```
 ![image](https://raw.githubusercontent.com/p6steve/raku-Dan-Jupyter/master/Screenshot%202022-05-16%20at%2020.03.57.png)
 
 vvvvvvvvvv FIXME
