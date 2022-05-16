@@ -18,7 +18,7 @@ docker push p6steve/raku-dan:jupyter-2022.02-amd64
 ```
 (you need to be p6steve to do this docker push ;-) )
 
-!(https://github.com/p6steve/raku-Dan-Jupyter/blob/master/Screenshot%202022-05-16%20at%2020.03.57.png)
+!(https://github.com/p6steve/raku-Dan-Jupyter/blob/master/Screenshot%202022-05-16%20at%2020.03.57.png?raw=true)
 
 vvvvvvvvvv FIXME
 
