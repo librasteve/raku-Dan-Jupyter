@@ -1,5 +1,8 @@
 FROM p6steve/raku-dan:pandas-2022.02-amd64
 
+RUN zef install Data::Generators \
+    && zef install Data::Reshapers
+
 RUN git clone https://github.com/p6steve/raku-Dan-Jupyter.git \
     && cp -R raku-Dan-Jupyter/eg ${HOME}
 
