@@ -1,5 +1,7 @@
 FROM p6steve/raku-dan:pandas-2022.02-amd64
 
+RUN zef upgrade Jupyter::Kernel
+
 RUN zef install Data::Generators \
     && zef install Data::Reshapers
 
