@@ -1,4 +1,4 @@
-FROM p6steve/raku-dan:pandas-2022.02-amd64
+FROM p6steve/raku-dan:pandas-amd64
 
 RUN zef upgrade Jupyter::Kernel
 
