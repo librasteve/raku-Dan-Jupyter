@@ -1,3 +1,6 @@
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+[![raku-dan:jupyter -> DH](https://github.com/p6steve/raku-Dan-Jupyter/actions/workflows/jupyter-weekly.yaml/badge.svg)](https://github.com/p6steve/raku-Dan-Jupyter/actions/workflows/jupyter-weekly.yaml)
+
 ## raku-Dan-Jupyter - WIP
 Jupyter workbook examples for raku [Dan](https://github.com/p6steve/raku-Dan) and [Dan::Pandas](https://github.com/p6steve/raku-Dan-Pandas)
 
@@ -31,3 +34,5 @@ docker push p6steve/raku-dan:jupyter-2022.02-amd64
 
 ### Inspired by
 * Brian Duggan's perl6 jupyter-notebook at <https://github.com/bduggan/p6-jupyter-kernel>
+
+copyright(c) 2022 Henley Cloud Consulting Ltd.
