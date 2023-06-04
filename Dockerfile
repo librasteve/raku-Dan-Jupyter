@@ -8,7 +8,8 @@ RUN zef install Data::Generators \
 RUN git clone https://github.com/librasteve/raku-Dan-Jupyter.git \
     && cp -R raku-Dan-Jupyter/eg ${HOME}
 
-#ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash"]
 
-#EXPOSE 8888
+EXPOSE 8888
+
 #CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0"]
