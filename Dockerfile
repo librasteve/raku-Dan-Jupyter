@@ -4,8 +4,8 @@ USER root
 
 RUN zef install https://github.com/librasteve/raku-Dan-Pandas.git
 
-RUN zef install --verbose https://github.com/librasteve/raku-Dan-Polars.git
-RUN git clone https://github.com/librasteve/raku-Dan-Polars.git
+#RUN zef install --verbose https://github.com/librasteve/raku-Dan-Polars.git
+#RUN git clone https://github.com/librasteve/raku-Dan-Polars.git
 
 RUN zef upgrade Jupyter::Kernel
 
