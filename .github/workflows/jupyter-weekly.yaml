@@ -12,8 +12,6 @@ jobs:
   build-pandas:
     runs-on: ubuntu-latest
     steps:
-      - continue-on-error: true
-      
       - name: Checkout
         uses: actions/checkout@v3
 
