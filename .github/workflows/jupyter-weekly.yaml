@@ -19,7 +19,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
         with:
-          platforms: linux/amd64
+          platforms: linux/arm64,linux/amd64
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -38,7 +38,7 @@ jobs:
           file: ./Dockerfile
           tags: librasteve/raku-dan:jupyter-amd64
           push: true
-          platforms: linux/amd64
+          platforms: linux/arm64,linux/amd64
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
