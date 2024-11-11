@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/raku-Physics-Measure-Jupyter.iml" filepath="$PROJECT_DIR$/raku-Physics-Measure-Jupyter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/raku-Dan-Jupyter.iml" filepath="$PROJECT_DIR$/.idea/raku-Dan-Jupyter.iml" />
     </modules>
   </component>
 </project>

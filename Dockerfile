@@ -2,12 +2,13 @@ FROM librasteve/rakudo:ipyjk
 
 USER root
 
+# Set default LD_LIBRARY_PATH variable
+ENV LD_LIBRARY_PATH=/opt/conda/lib
+
+# Persist the updated LD_LIBRARY_PATH in the environment
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+
 RUN zef install https://github.com/librasteve/raku-Dan-Pandas.git
-
-#RUN zef install --verbose https://github.com/librasteve/raku-Dan-Polars.git
-#RUN git clone https://github.com/librasteve/raku-Dan-Polars.git
-
-RUN zef upgrade Jupyter::Kernel
 
 RUN zef install Data::Generators \
     && zef install Data::Reshapers
