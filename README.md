@@ -5,7 +5,7 @@
 Jupyter workbook examples for raku [Dan](https://github.com/librasteve/raku-Dan) and [Dan::Pandas](https://github.com/librasteve/raku-Dan-Pandas)
 
 ### Installation
-Based on the Dockerfile chain [(1)](https://github.com/librasteve/raku-Dan-Jupyter/blob/master/Dockerfile) <= [(2)](https://github.com/librasteve/raku-Dan-Pandas/blob/main/Dockerfile) <= [(3)](https://github.com/librasteve/raku-Dockerfiles)
+Based on the Dockerfile chain [(1)](https://github.com/librasteve/raku-Dan-Jupyter/blob/master/Dockerfile) <= [(2)](https://github.com/librasteve/raku-Dockerfiles/blob/main/ipyjk/Dockerfile)
 - ```docker run -it --platform linux/amd64 -p 8888:8888 librasteve/raku-dan:jupyter-amd64```
 - ```jupyter notebook --port=8888 --no-browser --allow-root --ip=0.0.0.0```
 - this will open a jupyter-notebook session in your browser (copy & paste token from CLI)
